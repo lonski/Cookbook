@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Przepisy</class>
+ <widget class="QMainWindow" name="Przepisy">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>587</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Przepisy</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLineEdit" name="leFind"/>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icons.qrc">
+              <normaloff>:/ico/data/co16.png</normaloff>:/ico/data/co16.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton_2">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons.qrc">
+              <normaloff>:/ico/data/ex16.png</normaloff>:/ico/data/ex16.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tMenu">
+          <property name="font">
+           <font>
+            <family>Verdana</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="locale">
+           <locale language="Polish" country="Poland"/>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="headerShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Przepisy</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QTextBrowser" name="txtBrowser">
+       <property name="font">
+        <font>
+         <family>Verdana</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="locale">
+        <locale language="Polish" country="Poland"/>
+       </property>
+       <property name="autoFormatting">
+        <set>QTextEdit::AutoNone</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Verdana'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="overwriteMode">
+        <bool>true</bool>
+       </property>
+       <property name="tabStopWidth">
+        <number>20</number>
+       </property>
+       <property name="acceptRichText">
+        <bool>false</bool>
+       </property>
+       <property name="openLinks">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>902</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Sekcja</string>
+    </property>
+    <addaction name="actionNowa_sekcja_przepis_w"/>
+    <addaction name="actionUsu_sekcj"/>
+    <addaction name="actionZmie_nazw"/>
+   </widget>
+   <widget class="QMenu" name="menuPrzepis">
+    <property name="title">
+     <string>Przepis</string>
+    </property>
+    <addaction name="actionNowyPrzep"/>
+    <addaction name="actionUsu_przepis"/>
+    <addaction name="actionZmie_nazw_przepisu"/>
+   </widget>
+   <addaction name="menuPlik"/>
+   <addaction name="menuPrzepis"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNowa_sekcja_przepis_w"/>
+   <addaction name="actionNowyPrzep"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionEdycja"/>
+  </widget>
+  <action name="actionNowa_sekcja_przepis_w">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/ico/data/book24.png</normaloff>:/ico/data/book24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nowa sekcja</string>
+   </property>
+  </action>
+  <action name="actionNowyPrzep">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/ico/data/bookmark24.png</normaloff>:/ico/data/bookmark24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nowy przepis</string>
+   </property>
+  </action>
+  <action name="actionUsu_przepis">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/ico/data/delete16.png</normaloff>:/ico/data/delete16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Usuń przepis</string>
+   </property>
+  </action>
+  <action name="actionEdycja">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/ico/data/edit24</normaloff>:/ico/data/edit24</iconset>
+   </property>
+   <property name="text">
+    <string>Tryb edycji przepisu</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionUsu_sekcj">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/ico/data/delete16.png</normaloff>:/ico/data/delete16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Usuń sekcję</string>
+   </property>
+  </action>
+  <action name="actionZmie_nazw">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/ico/data/pencil16.png</normaloff>:/ico/data/pencil16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zmień nazwę sekcji</string>
+   </property>
+  </action>
+  <action name="actionZmie_nazw_przepisu">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/ico/data/pencil16.png</normaloff>:/ico/data/pencil16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zmień nazwę przepisu</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

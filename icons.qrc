@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/ico">
+        <file>data/book.png</file>
+        <file>data/bookmark.png</file>
+        <file>data/edit16.png</file>
+        <file>data/edit24.png</file>
+        <file>data/book24.png</file>
+        <file>data/bookmark24.png</file>
+        <file>data/delete16.png</file>
+        <file>data/pencil16.png</file>
+        <file>data/co16.png</file>
+        <file>data/ex16.png</file>
+    </qresource>
+</RCC>
